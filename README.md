@@ -1,6 +1,3 @@
-================================================================================
-          CẨM NANG HƯỚNG DẪN KUBERNETES (K8S) TOÀN DIỆN CHO THỰC HÀNH
-================================================================================
 
 1. MÔ HÌNH TƯ DUY KHÁI NIỆM (MENTALLY MAPPING)
 --------------------------------------------------------------------------------
@@ -165,13 +162,14 @@ Tách biệt mã nguồn và thông tin cấu hình môi trường theo chuẩn 
   Token API, SSH Key). Dữ liệu lưu trong Secret mặc định được mã hóa dưới dạng chuỗi Base64.
 
 
-================================================================================
+
 10. MẪU FILE MANIFEST HOÀN CHỈNH (.YAML) ĐẦY ĐỦ TÍNH NĂNG
-================================================================================
+
 Dưới đây là một file YAML chuẩn mẫu tích hợp toàn bộ các kiến thức từ mục 1 đến mục 9,
 bao gồm: Namespace, ConfigMap, Secret, Deployment với giới hạn tài nguyên và Service.
 
----
+``` text
+
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -193,4 +191,5 @@ metadata:
   namespace: huong-dan-k8s
 type: Opaque
 data:
-  # Chuỗi gốc là 'mysecretpassword' được mã hóa sang base64
+
+```
